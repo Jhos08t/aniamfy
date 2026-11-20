@@ -5,7 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#10101c">
 <meta name="description" content="Animafy: anima tus imágenes con inteligencia artificial.">
-<title>Animafy — Estudio de animación IA</title>
+<title>Animafy — Nuevo generador de vídeo IA</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <style>
 :root{color-scheme:dark;--bg:#0b0b14;--panel:#151525;--text:#f7f5ff;--muted:#aaa8c2;--purple:#9b72ff;--pink:#f06acb;--line:#303047}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#29204d 0,transparent 38%),radial-gradient(ellipse at 100% 20%,#321b3d 0,transparent 30%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,sans-serif;min-height:100vh}
@@ -17,7 +20,7 @@ textarea{width:100%;min-height:115px;resize:vertical;background:#0e0e19;border:1
 </style>
 </head>
 <body><div class="wrap">
-<header><div class="brand">Anima<span>fy</span> ✦</div><div class="tag">ESTUDIO CREATIVO CON IA</div></header>
+<header><div class="brand">Anima<span>fy</span> ✦</div><div class="tag">NUEVA IA · FREEGENVIDEO</div></header>
 <section class="hero"><h1>Dale vida a tus <em>imágenes</em></h1><p>Sube una fotografía, describe el movimiento y crea un vídeo animado. Diseñado para funcionar desde tu celular o computadora.</p></section>
 <main class="panel">
 <label class="label" for="imageInput">1. Elige tu imagen</label>
@@ -31,11 +34,11 @@ textarea{width:100%;min-height:115px;resize:vertical;background:#0e0e19;border:1
 <p id="status" class="status" role="status" aria-live="polite">Selecciona una imagen y escribe qué movimiento quieres.</p>
 <div class="notice"><b>Importante:</b> el generador FreeGenVideo es un servicio público externo. Puede tener colas, límites gratuitos o interrupciones. Animafy prepara tu instrucción y te lleva al generador; no promete resultados hasta que el servicio termine de procesar.</div>
 </main>
-<section class="panel"><h2 class="section-title">3. Generador de imagen a vídeo</h2><p class="hint">El generador acepta imagen y descripción del movimiento. Si no carga aquí, ábrelo en otra pestaña; vuelve a subir la misma imagen y pega tu instrucción.</p><div class="actions"><a class="btn secondary" href="https://freegen.video/" target="_blank" rel="noopener">Abrir generador FreeGenVideo ↗</a><button id="copy" class="btn secondary" type="button">Copiar instrucción</button></div><div style="margin-top:17px"><iframe class="embed" title="Generador FreeGenVideo" src="https://freegen.video/" loading="lazy" allow="clipboard-read; clipboard-write"></iframe><p class="hint">FreeGenVideo ofrece una generación gratuita diaria según la disponibilidad del servicio. Si no carga integrado, abre la página externa.</p></div></section>
+<section class="panel"><h2 class="section-title">3. Nuevo motor IA: FreeGenVideo</h2><p class="hint">El generador acepta imagen y descripción del movimiento. Si no carga aquí, ábrelo en otra pestaña; vuelve a subir la misma imagen y pega tu instrucción.</p><div class="actions"><a class="btn secondary" href="https://freegen.video/?source=animafy" target="_blank" rel="noopener">Abrir generador FreeGenVideo ↗</a><button id="copy" class="btn secondary" type="button">Copiar instrucción</button></div><div style="margin-top:17px"><iframe class="embed" title="Generador FreeGenVideo" src="https://freegen.video/?source=animafy" loading="lazy" allow="clipboard-read; clipboard-write"></iframe><p class="hint">FreeGenVideo ofrece una generación gratuita diaria según la disponibilidad del servicio. Si no carga integrado, abre la página externa.</p></div></section>
 <footer>Animafy · Proyecto experimental · Generador FreeGenVideo</footer>
 </div>
 <script>
-const VIDEO_URL='https://freegen.video/';
+const VIDEO_URL='https://freegen.video/?source=animafy';
 const input=document.getElementById('imageInput'),preview=document.getElementById('preview'),prompt=document.getElementById('prompt'),status=document.getElementById('status');
 input.addEventListener('change',()=>{const f=input.files&&input.files[0];if(!f){preview.style.display='none';return}if(!f.type.startsWith('image/')){alert('Selecciona una imagen JPG, PNG o WEBP.');input.value='';return}if(preview.src.startsWith('blob:'))URL.revokeObjectURL(preview.src);preview.src=URL.createObjectURL(f);preview.style.display='block';status.textContent='Imagen lista: '+f.name+'. Ahora escribe el movimiento.'});
 document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{prompt.value=b.dataset.prompt;prompt.focus();status.textContent='Movimiento seleccionado. Puedes editarlo o abrir el generador.'}));
