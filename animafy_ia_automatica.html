@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animafy — Animación con IA</title>
+<style>
+:root{--bg:#0b1020;--panel:#131b31;--panel2:#192440;--text:#f4f6ff;--muted:#a8b2cc;--purple:#9b7bff;--cyan:#59d9d0;--line:#2a3656}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#26204c 0,transparent 34%),radial-gradient(circle at 90% 20%,#123c4b 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;min-height:100vh}
+header{max-width:1160px;margin:auto;padding:24px 22px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center;font-size:22px;font-weight:800;letter-spacing:-.5px}.logo{width:39px;height:39px;border-radius:13px;background:linear-gradient(135deg,var(--purple),var(--cyan));display:grid;place-items:center;color:#10152a;font-size:21px}.tag{font-size:12px;color:#c8baff;border:1px solid #6656a5;border-radius:99px;padding:7px 11px}
+main{max-width:1160px;margin:24px auto 70px;padding:0 22px}.hero{text-align:center;margin:48px auto 30px;max-width:760px}.eyebrow{color:var(--cyan);font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:11px}.hero h1{font-size:clamp(35px,6vw,62px);line-height:1.04;letter-spacing:-2px;margin:14px 0}.hero h1 span{background:linear-gradient(90deg,#b69cff,#67e5d8);color:transparent;background-clip:text}.hero p{color:var(--muted);font-size:16px;line-height:1.7;margin:auto;max-width:620px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:32px 0}.step{background:#111a30c9;border:1px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:12px;align-items:center}.num{width:30px;height:30px;flex:none;border-radius:10px;background:#29234c;color:#c6b6ff;display:grid;place-items:center;font-weight:800}.step b{display:block;font-size:13px}.step small{color:var(--muted);font-size:11px}
+.workspace{background:linear-gradient(145deg,#18233e,#10182b);border:1px solid #354365;border-radius:23px;padding:20px;box-shadow:0 24px 70px #0005}.workhead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:15px}.workhead h2{font-size:19px;margin:0}.status{font-size:11px;color:#a7f2d9;background:#143a38;border:1px solid #24635d;padding:7px 10px;border-radius:99px}.embed{border-radius:15px;overflow:hidden;background:#fff;min-height:690px}.embed iframe{display:block;width:100%;height:760px;border:0;background:white}.fallback{padding:16px;background:#10182b;color:var(--muted);font-size:13px;line-height:1.6}.fallback a,.btn{color:#10152a;background:linear-gradient(90deg,#b69cff,#67e5d8);font-weight:800;text-decoration:none;padding:11px 16px;border-radius:11px;display:inline-block;margin-top:8px}
+.notice{margin-top:16px;background:#211f36;border:1px solid #504477;border-radius:14px;padding:14px 16px;color:#c9c4e2;font-size:12px;line-height:1.6}.notice b{color:#fff}.footer{text-align:center;color:#7f8ba9;font-size:11px;margin:24px 0}.footer a{color:#b9a8ff}
+@media(max-width:650px){header{padding:17px}.tag{font-size:10px}.hero{margin-top:30px}.steps{grid-template-columns:1fr;gap:8px}.workspace{padding:12px;border-radius:18px}.embed{min-height:720px}.embed iframe{height:820px}.workhead{align-items:flex-start;flex-direction:column}}
+</style></head>
+<body>
+<header><div class="brand"><div class="logo">✦</div>Animafy</div><div class="tag">ANIMACIÓN CON IA</div></header>
+<main>
+<section class="hero"><div class="eyebrow">De imagen fija a movimiento</div><h1>Dale vida a tus personajes <span>con IA</span></h1><p>Sube una imagen, describe cómo quieres que se mueva y deja que un modelo de inteligencia artificial genere un pequeño vídeo.</p></section>
+<section class="steps"><div class="step"><div class="num">1</div><div><b>Sube tu imagen</b><small>Personaje, dibujo o fotografía</small></div></div><div class="step"><div class="num">2</div><div><b>Describe el movimiento</b><small>Caminar, bailar, saludar…</small></div></div><div class="step"><div class="num">3</div><div><b>Genera y guarda</b><small>Previsualiza el resultado y descarga</small></div></div></section>
+<section class="workspace"><div class="workhead"><h2>🎬 Crear mi animación</h2><div class="status">Motor gratuito comunitario · Wan 2.2</div></div>
+<div class="embed"><iframe src="https://zerogpu-aoti-wan2-2-fp8da-aoti-faster.hf.space" title="Generador de vídeo IA" loading="lazy" allow="clipboard-read; clipboard-write"></iframe></div>
+<div class="fallback">¿No aparece el generador dentro de Animafy? Ábrelo directamente en Hugging Face:<br><a href="https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster" target="_blank" rel="noopener">Abrir generador de vídeo IA ↗</a></div>
+</section>
+<div class="notice"><b>Sobre el uso gratuito:</b> este generador usa un Space público de Hugging Face. Puede tener cola, límites diarios o dejar de estar disponible si su creador lo pausa. No es un servicio ilimitado ni controlado por Animafy. Tus imágenes se envían al servicio externo para generar el vídeo. <a href="https://huggingface.co/spaces/zerogpu-aoti/wan2-2-fp8da-aoti-faster" target="_blank" rel="noopener" style="color:#c7b7ff">Ver servicio y condiciones</a>.</div>
+<div class="footer">Animafy · Prototipo de interfaz conectado a un generador externo de imagen a vídeo.<br>El generador y su disponibilidad dependen de Hugging Face y de quien mantiene el Space.</div>
+</main></body></html>
